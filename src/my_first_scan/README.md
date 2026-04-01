@@ -32,6 +32,45 @@ ros2 topic echo /scan
 2. Fixed Frame → `base_link`
 3. Add → LaserScan → Topic: `/scan`
 
+## Foxglove Studio での可視化（スマホ・ブラウザ対応）
+
+RViz2 の代わりに Foxglove Studio を使うと、スマホブラウザから VPS 上の ROS2 を可視化できる。
+
+### インストール（VPS）
+
+```bash
+sudo apt install ros-jazzy-foxglove-bridge
+```
+
+### 一括起動（scan_publisher + TF + foxglove_bridge）
+
+```bash
+ros2 launch my_first_scan scan_foxglove.launch.py
+```
+
+### 接続（スマホ / PC ブラウザ）
+
+1. ブラウザで https://studio.foxglove.dev を開く
+2. 「Open connection」→「WebSocket」を選択
+3. `ws://<VPS_IP>:8765` を入力して接続
+4. 「Add panel」→「3D」→ トピック `/scan` を選択
+
+### ポート開放（必要な場合）
+
+```bash
+sudo ufw allow 8765
+```
+
+### Tailscale 利用時（推奨）
+
+インターネット公開せず安全に接続できる。
+
+```bash
+ws://<tailscale_ip>:8765
+```
+
+---
+
 ## 学んだこと
 - [ ] rclpy の Node / Timer / Publisher の使い方
 - [ ] `sensor_msgs/msg/LaserScan` のフィールド構成
