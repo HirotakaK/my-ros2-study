@@ -44,3 +44,4 @@ source install/setup.bash
 | # | パッケージ | 内容 |
 |---|---|---|
 | 1 | [my_first_scan](src/my_first_scan/) | 疑似LaserScanの配信とRViz2可視化 |
+| 2 | [my_tf2_robot](src/my_tf2_robot/) | tf2で「ちゃんとしたロボ座標系」を作る |
