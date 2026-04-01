@@ -72,8 +72,10 @@ ws://<tailscale_ip>:8765
 ---
 
 ## 学んだこと
-- [ ] rclpy の Node / Timer / Publisher の使い方
-- [ ] `sensor_msgs/msg/LaserScan` のフィールド構成
-- [ ] `header.frame_id` と TF の関係
-- [ ] `static_transform_publisher` でフレームを繋ぐ方法
-- [ ] RViz2 での LaserScan 表示設定
+- [x] rclpy の Node / Timer / Publisher の使い方
+- [x] `sensor_msgs/msg/LaserScan` のフィールド構成
+- [x] `header.frame_id` と TF の関係
+- [x] `static_transform_publisher` でフレームを繋ぐ方法
+- [x] RViz2 での LaserScan 表示設定
+- [x] Foxglove Studio + foxglove_bridge でスマホ・ブラウザから可視化する方法
+- [x] launch ファイルで複数ノードを一括起動する方法
