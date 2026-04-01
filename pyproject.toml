@@ -1,0 +1,19 @@
+[project]
+name = "my-ros2-study"
+version = "0.1.0"
+description = "ROS2の基礎を手を動かして学ぶ開発環境"
+requires-python = ">=3.12"
+
+# ROS2パッケージ本体の依存はcolcon/package.xmlで管理
+# ここでは開発ツールのみ管理する
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "flake8>=7.0",
+    "pytest>=8.0",
+]
+
+[tool.uv]
+# ROS2のシステムパッケージと共存させるためシステムPythonを使う
+python-preference = "system"
